@@ -65,6 +65,15 @@ function showContent(contentType) {
     document.querySelector('.' + contentType).classList.add('active');
 }
 
+var links = document.querySelectorAll('.left .top a');
+links.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        var contentType = this.getAttribute('onclick').match(/\('(.*)'\)/)[1];
+        showContent(contentType);
+    });
+});
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     centeredSlides: true,
@@ -81,7 +90,6 @@ var flag = 0
 menu.addEventListener("click", function(){
     if(flag == 0){
         menuBack.style.top = "0"
-        menuBack.style.opacity = "1"
         navBrand.style.opacity = "0"
         menuOpen.style.transform = "translate(0, 5px) rotate(45deg)"
         menuClose.style.transform = "translate(0, -1px) rotate(-45deg)"
@@ -89,7 +97,6 @@ menu.addEventListener("click", function(){
     }
     else {
         menuBack.style.top = "-100%"
-        menuBack.style.opacity = "0"
         navBrand.style.opacity = "1"
         menuOpen.style.transform = "translate(0) rotate(0"
         menuClose.style.transform = "translate(0) rotate(0)"
