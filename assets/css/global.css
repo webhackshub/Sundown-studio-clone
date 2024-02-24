@@ -1,11 +1,11 @@
 @font-face {
     font-family: NHD-R;
-    src: url(/assets/fonts/NeueHaasDisplay-Roman.woff2);
+    src: url(https://github.com/webhackshub/Sundown-studio-clone/blob/main/assets/fonts/NeueHaasDisplay-Roman.woff2);
 }
 
 @font-face {
     font-family: NHD-M;
-    src: url(/assets/fonts/NeueHaasDisplay-Mediu.woff2);
+    src: url(https://github.com/webhackshub/Sundown-studio-clone/blob/main/assets/fonts/NeueHaasDisplay-Mediu.woff2);
 }
 
 * {
